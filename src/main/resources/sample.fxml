@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="733.0" style="-fx-background-color: #1b1c1c;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SampleController">
+   <children>
+      <Pane prefHeight="30.0" prefWidth="733.0" style="-fx-background-color: #000000;">
+         <children>
+            <Text fill="WHITE" layoutX="25.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BMI calculator">
+               <font>
+                  <Font name="Corbel" size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="exit_button" cancelButton="true" layoutX="704.0" layoutY="1.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="Candara" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="minimalize_button" layoutX="650.0" layoutY="1.0" mnemonicParsing="false" onAction="#minimize" style="-fx-background-color: transparent;" text="—" textFill="WHITE">
+               <font>
+                  <Font name="Candara" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </Pane>
+      <Button fx:id="button1" layoutX="262.0" layoutY="552.0" mnemonicParsing="false" onAction="#count" prefHeight="55.0" prefWidth="210.0" style="-fx-background-color: #2f3030; -fx-border-radius: 8; -fx-background-radius: 8;" text="Calculate" textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="8.75" offsetY="4.0" radius="4.9375" width="13.0">
+               <color>
+                  <Color opacity="0.12826086580753326" />
+               </color>
+            </DropShadow>
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <TextField fx:id="weight" layoutX="353.0" layoutY="160.0" style="-fx-background-color: #ffffff;" />
+      <Label layoutX="175.0" layoutY="162.0" prefHeight="22.0" prefWidth="149.0" text="Input weight (kg):" textFill="WHITE">
+         <font>
+            <Font name="Corbel Light" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="174.0" layoutY="211.0" prefHeight="22.0" prefWidth="164.0" text="Input height (cm):" textFill="WHITE">
+         <font>
+            <Font name="Corbel Light" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="height" layoutX="353.0" layoutY="209.0" style="-fx-background-color: #ffffff;" />
+      <Group fx:id="elems" visible="false">
+         <children>
+            <Line endX="200.0" layoutX="337.0" layoutY="366.0" startX="-100.0" stroke="#9a9a9a" strokeWidth="3.0">
+               <effect>
+                  <DropShadow offsetY="4.0" spread="0.3" />
+               </effect>
+            </Line>
+            <Text layoutX="249.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="18,5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="0.5285714285714285" endY="1.0" startX="0.4857142857142857" startY="1.0">
+                     <stops>
+                        <Stop color="#000ef0" />
+                        <Stop color="#006522" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Line endX="100.0" layoutX="367.0" layoutY="474.0" startX="-100.0" stroke="#006522" strokeWidth="2.0">
+               <effect>
+                  <DropShadow height="18.03" offsetY="4.0" radius="12.1625" spread="0.22" width="32.62" />
+               </effect>
+            </Line>
+            <Text fill="WHITE" layoutX="325.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Information">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Line endX="100.0" layoutX="569.0" layoutY="474.0" startX="-100.0" stroke="#b20101" strokeWidth="2.0">
+               <effect>
+                  <DropShadow height="18.03" offsetY="4.0" radius="12.1625" spread="0.22" width="32.62" />
+               </effect>
+            </Line>
+            <Text fill="#b20101" layoutX="543.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overweight">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#006321" layoutX="313.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct weight">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="451.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25,0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="0.5285714285714285" endY="1.0" startX="0.4857142857142857" startY="1.0">
+                     <stops>
+                        <Stop color="#006522" />
+                        <Stop color="#b20101" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Text fill="#b20101" layoutX="642.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="40,0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#0c1cc9" layoutX="64.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16,0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#2300d0" layoutX="132.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Underweight">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="imt" fill="WHITE" layoutX="387.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMT" textAlignment="CENTER" wrappingWidth="66.796875">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Line endX="100.0" layoutX="165.0" layoutY="474.0" startX="-100.0" stroke="#000ef0" strokeWidth="2.0">
+               <effect>
+                  <DropShadow height="18.03" offsetY="4.0" radius="12.1625" spread="0.22" width="32.62" />
+               </effect>
+            </Line>
+            <Text fx:id="small" fill="#1379ff" layoutX="397.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Underweight" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="normal" fill="#05b557" layoutX="397.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct weight" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="result" fill="WHITE" layoutX="296.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20,8" textAlignment="CENTER" wrappingWidth="91.0">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Text>
+            <Text fx:id="big" fill="#f22d2d" layoutX="397.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overweight" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+   </children>
+</AnchorPane>
